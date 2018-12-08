@@ -1,0 +1,77 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Contadores y Sumadores.</title>
+</head>
+<body background="fondo.jpg">
+<h1><i><b><center><font color="#FFB6CI">Contadores y Sumadores</font></center></b></i></h1>
+<font color="FFF0F5">
+<h2>Contadores.</h2>
+<h3>Contador Digital</h3>
+<img style="float:right;margin:10px" src="SConta.png">
+<p>Es todo circuito o dispositivo que genera una serie de combinaciones a sus salidas sincronizadas por una señal de reloj externa.</p>
+<h3>Clasificaciones:</h3>
+<p>Según el comportamiento con la señal de reloj:</p>
+<p>-Contadores asincrónicos. </p>
+<p>-Contadores sincrónicos.</p>
+<p>Según el formato de salida del conteo:</p>
+<p>-Binario</p>
+<p>-BCD (Decimal Codificado en Binario)</p>
+<p>-Arbitrario</p>
+<h3>Contador Asincrónico.</h3>
+<p>Formado en principio por Flip-Flopsy lógica combinatoria adicional. Se llaman asíya que la señal externa de reloj en general se conecta a la entrada de un solo Flip-flopy se propaga luego internamente. La ventaja es su sencillez. Su principal desventaja es su limitada velocidad de respuesta que depende fuertemente de la cantidad de bits que maneje.</p>
+<h3>Contador Asincrónico</h3>
+<p>Formado en principio por Flip-Flopsy lógica combinatoria adicional. Se llaman asíya que la señal externa de reloj en general se conecta a las entradas de reloj de todos los Flip-flopsimultáneamente. La ventaja es su mayor velocidad de respuesta respecto al asincrónico. Su relativa desventaja es su mayor complejidad circuitaly consumo de energía.</p>
+<h3>Contador asincrónico binario progresivo.</h3>
+<p>Dado que la señal de reloj de cada FF se obtiene de la salida del FF anterior existe una cadena de retardos en las respuestas. </p>
+<p>El primer FF es que reacciona mas rápido al cambio del CLK y así sucesivamente por lo que el último FF es el que define la velocidad de respuesta del contador.</p>
+<p>A mayor número de bits, mayor retardo. Los peores casos son para los conteos en donde cambia el FF mas significativo (el último).
+Existen los denominados códigos inválidos que son valores en las salidas que están todavía en transición.</p>
+<p>Por ejemplo en el pasaje de conteo de 3 a 4 y de 7 a 8, Q2 cambia y se generan las respuestas más lentas (3 retardos de FF).</p>
+
+<h1><i><b><center><font color="#FFB6CI">Video sobre los contadores</font></center></b></i></h1>
+
+<center>
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fYAPDCiCZJg"
+frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+</center>
+
+<h2>Sumadores.</h2>
+<p>Los circuitos digitales sumadores realizan la suma aritmética de dos números enteros positivos, normalmente descritos en notación posicionalbinaria, aunque pueden desarrollarse sumadores para otros formatos de descripción numérica.</p>
+<p>Los sumadores  son un elemento crítico en el desarrollo de circuitos aritméticos por lo que se han desarrollado numerosas estructuras que buscan la mejora de las prestaciones del circuito, balanceando entre su tamaño y su velocidad.</p>
+<p>Para operandos A y B de un bitya se han desarrollado en otros temas el sumador completo (“full-adder”) con acarreo de entrada (Ci) y el semi-sumador (“half-adder) sin acarreo de entrada. Los bits de salida serán la salida de suma S y el acarreo de salida (Co).</p>
+<img style="float:center;margin:10px" src="Sum.png" width="222" height="278"><img style="float:left;margin:10px" src="Sum1.png" width="222" height="">
+<br>Para sumadores de N bits un método natural de realizar la suma es situar sumadores completos en modo “ripple”o en serie, de forma que desde el bit menos significativo hacia el más significativo el acarreo de entrada del bitj esté conectado al acarreo de salida del bitj-1.
+<p>El primer bit se puede construir con un semisumador mientras que los demás bits requieren un sumador completo, en este caso se tiene un semisumador de N bits.</p>
+<p>Si en el primer bit se utiliza un sumador completo, el circuito dispone además de acarreo de entrada Ciy se tiene un sumador completo de N bits. Tener acarreo de entrada permite un mejor funcionalidad del circuito, como por ejemplo poner en serie dos (o más) sumadores de N bits para formar un sumador de 2N bits.</p>
+<p>En cualquier caso se tienen N+1 bits de salida: N de suma S y un acarreo de salida Co.</p>
+<p>El tiempo de propagación de este sumador es proporcional al número N de sumadores en serie.</p>
+<img src="Sum2.png" width="564" height="113">
+<p>Otra solución es llevar la estructura de “carrylook-ahead” a más niveles, la expresión de Cotambién se puede poner de la forma:</p>
+<p>Co= G + P Ci, siendo</p>
+<p>Co= G3 + P3G2 + P3P2G1 + P3P2P1G0 + P4P3P2P1Ci, luego</p>
+<p>G = G3 + P3G2 + P3P2G1 + P3P2P1G0</p>
+<p>P = P4P3P2P1</p>
+<p>Donde G y P son el “carry-generate” y el “carry-propagate” de una suma de 4 bits. Si se añaden las ecuaciones de G y P a T2 se pueden realizar sumadores de 16 bits con esta estructura, que se puede llevar a más bits utilizando más niveles de T2 (64 bits, 4 grupos de 16 con un nivel más).</p>
+<p>El sumador “ripple” es un sumador lento. Para construir sumadores rápidos hay que intentar paralelizar el cálculo de los acarreos. El método “carrylook-ahead” genera los acarreos en paralelo obteniendo su expresión lógica de forma recursiva:</p>
+<p>Para cada bitj se obtiene de Aj y Bj en paralelo el “Carry-Propagate” Pj que indica las condiciones bajo las cuales el acarreo se propagade la entrada a la salida, y el “Carry-Generate” Gj que indica las condiciones bajo las cuales se genera acarreo de salida independientemente del acarreo de entrada.</p>
+<p>Co= G + P Ci, hay acarreo si se genera o si se propaga con Cia 1.</p> <img src="Sum3.png" width="406" height="84">
+
+<h1><i><b><center><font color="#FFB6CI">Video sobre los sumadores</font></center></b></i></h1>
+
+<center>
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/poS3RtTm1T4"
+frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+</center>
+
+<center>
+<h2><a href="javascript:print()"><span style="color: rgb(255, 240, 245);"><span style="font-family: Arial;"><span style="font-size: x-large;">Imprimir Contenido</span></span></span></a></h2>
+</center>
+
+</body>
+</html>

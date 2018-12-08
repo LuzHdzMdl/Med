@@ -1,0 +1,51 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>ALU</title>
+</head>
+<body background="fondo.jpg">
+<h1><center><font color="#FFB6CI">ALU</font></center></h1>
+<font color="FFE4E1">
+<img style="float:right;margin:10px" src="ALU.png" width="396">
+<p>Una ALU (Unidad Aritmética-Lógica) es un circuito que permite, como su nombre lo indica, realizar operaciones lógicas y aritméticas.</p>
+<p>Además de los operadores lógicos y aritméticos, la ALU cuenta con una serie de registros para almacenar los datos, y bits de información sobre los resultados, también llamados banderas.</p>
+<p>Las banderas más comunes son: Carry, Auxiliary Carry, Borrow, Overflow, Parity, Zero.</p>
+<p>ALU: Unidad Aritmética Lógica. Requiere saber en cada momento lo que va a hacer.</p>
+<p>Codificador: Interpreta el código Máquina.</p>
+<p>Registro: Almacena la instrucción que mientras se ejecuta.</p>
+<p>El circuito ALU es simplemente un operador, es decir, sólo realiza operaciones, no toma decisiones. Las entradas deben contener tanto la magnitud como el signo que corresponda a la operación, requiere de un mecanismo de control que le permita saber el tipo de operación a realizar.</p>
+<h2>Diseño de una ALU</h2>
+<p>Una forma de construir una ALU simple es mediante una célula de tipo “bit-slice”. Esta célula permite realizar la suma ó alguna operación lógica entre 2 bits.</p>
+<p>En principio, la célula basada en un Full Adder permite realizar operaciones de SUMA, RESTA, AND, OR, XOR y NOT. Las funciones AND y XOR se toman de las salidas de CarryOut y Suma Respectivamente. Esta arquitectura tiene la limitante que, para las funciones AND y XOR, se requiere de que tanto A como B no estén negados, y que el Carry-In sea ‘0’.</p>
+<img style="float:center;margin:10px" src="ALU3.png" width="308">
+<p> Si A, o B están negadas, o si el Carry-in es ‘1’. Entonces las salidas de Carry-Out y de Suma no pueden ser utilizadas para generar las funciones AND y XOR respectivamente:</p>
+<p> Si A, o B están negadas, o si el Carry-in es ‘1’. Entonces las salidas de Carry-Out y de Suma no pueden ser utilizadas para generar las funciones AND y XOR respectivamente:</p>
+<p>Otro tipo de célula que se puede emplear es a base de multiplexores:</p>
+<img style="float:center;margin:10px" src="ALU4.png" width="365">
+<h2>Partes de la ALU.</h2>
+<ul>
+	<li>Sumador/restador rápido.</li>
+	<li>Operadores lógicos (AND, OR, XOR, NOT).</li>
+	<li>Un acumulador y un registro auxiliar.</li>
+	<li>Un registro de salida.</li>
+	<li>Señales de control que indiquen la operación a realizar.</li>
+	<li>Registro de banderas de estatus.</li>
+</ul>
+
+<h1><center><font color="#FFB6CI">Video sobre ALU</font></center></h1>
+
+<center>
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HXp_67RA8L8"
+frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+</center>
+
+<center>
+<h3><a href="javascript:print()"><span style="color: rgb(255, 240, 245);"><span style="font-family: Arial;"><span style="font-size: x-large;">Imprimir Contenido</span></span></span></a></h3>
+</center>
+
+</font>
+</body>
+</html>

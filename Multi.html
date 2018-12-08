@@ -1,0 +1,105 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Multiplexores</title>
+</head>
+<body background="fondo.jpg">
+<h1><p><i><font color="#FFB6CI"><center>Multiplexores.</center></font></i></p></h1>
+<font color="FFF0F5">
+<img style="float:right;margin:10px" src="Multi.png" width="434" height="146">
+<p> Un multiplexor es un circuito digital que selecciona una de entre varias entradas de datos Ii y lleva su valor l&oacutegico a la &uacutenica salida Z del circuito. La selecci&oacuten de los datos se realiza mediante una o varias entradas de control Sj. La codificaci&oacuten binaria resultante de las entradas S indica el &iacutendice de la entrada I que pasa a la salida. Existiendo una entrada de habilitaci&oacuten (enable),la cual pone en funcionamiento el circuito,y trabaja en bajo &aacutectivo.</p>
+<h2>Esquema b&aacutesico del funcionamiento de un multiplexor 2 input-mux.</h2>
+<P>En el esquema se puede apreciar que existen dos entradas posibles,y el valor que tenga la salida depende de la señal de control SEL.</P>
+<div>
+	<h2>Esquema de multiplexores.</h2>
+	<p>Su funcionamiento es como sigue:</p>
+	<p>Con la combinaci&oacuten binaria presente en las entradas de selecci&oacuten, escogemos la entrada de informaci&oacuten cuyo valor se va a transmitir a la salida.</p>
+</div>
+<h2>Diseño un multiplexor de 2 canales de entrada.</h2>
+<p>1º) Se procede a la implementaci&oacuten de una tabla de verdad,en la cual se aprecian los valores de la salida dependiendo de el valor de la señal de control y de la señal de habilitaci&oacuten(enable):</p>
+<p>Ejemplos de explicaci&oacuten:</p>
+<ol>
+	<li>Si el Enable est&aacute en alto activo, el ciercuito est&aacute apagado.</li>
+	<li>Si el Enable est&aacute en bajo activo, el circuito funciona y selecciona la entrada atribuida a la señal de control.</li>
+</ol>
+<table width="80%" align="0" border="1">
+	<tr align="center">
+		<td><b>Enable</b></td><td><b>D1</b></td><td><b>D0</b></td><td><b>S0</b></td><td><b>Z</b></td>
+	</tr>
+	<!---Segunda fila-->
+	<tr align="center">
+		<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<!---tercera fila-->
+	<tr align="center">
+		<td>0</td><td>0</td><td>0</td><td>1</td><td>0</td>
+	</tr>
+	<!---cuarta fila-->
+	<tr align="center">
+		<td>0</td><td>0</td><td>1</td><td>0</td><td>1</td>
+	</tr>
+	<!---Quinta fila-->
+	<tr align="center">
+		<td>0</td><td>0</td><td>1</td><td>1</td><td>0</td>
+	</tr>
+	<!---sexta fila-->
+	<tr align="center">
+		<td>1</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<!---Septima fila-->
+	<tr align="center">
+		<td>0</td><td>1</td><td>0</td><td>1</td><td>1</td>
+	</tr>
+	<!---Octava fila-->
+	<tr align="center">
+		<td>0</td><td>1</td><td>1</td><td>0</td><td>1</td>
+	</tr>
+	<!---Novena fila-->
+	<tr align="center">
+		<td>0</td><td>1</td><td>1</td><td>1</td><td>1</td>
+	</tr>
+	<!---Decima fila-->
+	<tr align="center">
+		<td>1</td><td>X</td><td>X</td><td>X</td><td>0</td>
+	</tr>
+</table>
+<h2>Minimizaci&oacuten mediante mapas de Karnaugh:</h2>
+ <img style="float:center;margin:10px" src="multi2.png" width="265" ="" height="246">
+<p>Función en forma SOP: &sum;(2,5,6,7)</p>
+
+<h2>3º) Diseño del circuito y simulación mediante puertas lógicas.</h2>
+<img style="float:center;margin:10px" src="Multi4.png" width="348" height="169">
+<img style="float:center;margin:10px" src="Multi3.png" width="900" height="333">
+<h2>Obtención de un multiplexor mediante puertas lógicas</h2>
+<p> Si se desea construir un multiplexor con las características que se quiera, se puede hacer un diseño mediante tablas de verdad y a continuación, implementarlo mediante puertas lógicas:</p>
+<h2>2. Imput-mux</h2>
+<table width="" align="" border="">
+	<tr align="center">
+		<td><b>S</b></td><td><b>Z</b></td>
+	</tr>
+	<tr>
+		<td>0</td><td>|0</td>
+	</tr>
+	<tr>
+		<td>1</td><td>|</td>
+	</tr>
+
+</table>
+
+<h1><p><i><font color="#FFB6CI"><center>Video sobre los multiplexores.</center></font></i></p></h1>
+
+<center>
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gTcU-FrRioM"
+frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+</center>
+
+<center>
+<h2><a href="javascript:print()"><span style="color: rgb(255, 240, 245);"><span style="font-family: Arial;"><span style="font-size: x-large;">Imprimir Contenido</span></span></span></a></h2>
+</center>
+
+</font>
+</body>
+</html>

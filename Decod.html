@@ -1,0 +1,186 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title>Decodificadores</title>
+</head>
+<body background="fondo.jpg">
+<h1><i><b><font color="#FFB6CI"><center>Decodificadores</center></font></b></i></h1>
+<font color="FFF0F5">
+<img style="float:right;margin:10px" src="ImgDec.png" width="287" height="162">
+<p>Tienen como funci&oacuten detectar la presencia de una determinada combinaci&oacuten de bits en sus entradas y señalar la presencia de este c&oacutedigo mediante un cierto nivel de salida.</p>
+<p>Un decodificador posee N l&iacuteneas de entrada para gestionar  N bits y en una de las 2^N l&iacuteneas de salida indica la presencia de una o mas combinaciones de n bits.</p>
+<p>Para cualquier c&oacutedigo dado en las entradas solo se activa una de las N posibles salidas.</p>
+<h2><i>Tipos de decodificadores:</i></h2>
+<dl>
+	<h3><dt><b>Decodificadores Binarios B&aacutesicos.</b></dt></h3>
+	<dd>Cuando se quiere determinar  cuando por ejemplo aparece 1001 en las entradas de un circuito digital.
+Todas las entradas de la puerta AND est&aacuten a nivel ALTO ya que dicha puerta produce una salida a nivel ALTO.</dd>
+<p>Funcionamiento: Ejemplo, decodificador 2 a 4.</p>
+<br><center>
+	<table width="50%" align="0" border="1">
+		<tr align="center" bgcolor="C0C0C0">
+			<td><b>A</b></td>
+			<td><b>B</b></td>
+			<td><b>Out 3</b></td>
+			<td><b>Out 2</b></td>
+			<td><b>Out 1</b></td>
+			<td><b>Out 0</b></td>
+		</tr>
+		<tr align="center" bgcolor="C0C0C0">
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+		</tr>
+
+		<tr align="center" bgcolor="C0C0C0">
+			<td>0</td>
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>0</td>
+		</tr>
+
+		<tr align="center" bgcolor="C0C0C0">
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+
+		<tr align="center" bgcolor="C0C0C0">
+			<td>1</td>
+			<td>1</td>
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+	</table>
+	<img style="float:center;margin:10px" src="Dec3.png" width="200" height="240">
+</center>
+<p>Un decodificador tambi&eacuten puede utilizarse para implementar funciones l&oacutegicas en la forma SOP, basta colocar una compuerta OR que tome todas las salidas correspondientes para las cuales la funci&oacuten tiene que valer 1. </p>
+<img style="float:left;margin:10px" src="Dec4.png" width="340" height="302">
+<img style="float:center;margin:10px" src="Dec5.png" width="400" height="302">
+</dl>
+
+<dl>
+	<h3><b>El decodificador de 4 bits ó decodificador 1 de 16.</b></h3>
+	<dd>Se utiliza para poder decodificar todas las combinaciones de 4 bits. Para cualquier c&oacutedigo dado en las entradas solo se activa una de las posibles diecis&eacuteis  salidas. Si requerimos una salida a nivel bajo, el decodificador de puede implementar con puertas NAND e inversores, uno por cada salida. A continuaci&oacuten se muestra la tabla de verdad de un decodificador 1 de 16con salidas activas a nivel alto.</dd>
+
+<table width="80%" align="10" border="1">
+	<tr align="center" bgcolor="483D8B">
+		<td bgcolor="6A5ACD"><b>A3</b></td><td bgcolor="6A5ACD"><b>A2</b></td>><td bgcolor="6A5ACD"><b>A1</b></td>><td bgcolor="6A5ACD"><b>A0</b></td>><td><b>15</b></td>><td><b>14</b></td>><td><b>13</b></td>><td><b>12</b></td>><td><b>11</b></td>><td><b>10</b></td>><td><b>9</b></td>><td><b>8</b></td>><td><b>7</b></td>><td><b>6</b></td>><td><b>5</b></td>><td><b>4</b></td>><td><b>3</b></td>><td><b>2</b></td>><td><b>1</b></td>><td><b>0</b></td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+	<tr align="center" bgcolor="808080">
+		<td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+<p>De "A3" a "A0" son entradas</p>
+<p>De "15" a "0" son salidas.</p>
+</table>
+</dl>
+<dl>
+	<h3><b> El decodificador BCD a decimal.</b></h3>
+	<dd><p>Convierte cada c&oacutedigo BCD en uno de los diez posibles d&iacutegitos decimales. El m&eacutetodo de implementaci&oacuten es el mismo que para un decodificador 4 a 16,pero con la diferencia de que las salidas son solo 10. Obtendremos salidas activas a nivel ALTO y BAJO implementando las funciones con puertas AND  y NAND respectivamente.</p></dd>
+
+	<h3><b> Decodificadores BCD a 7 segmentos.</b></h3>
+	<dd>Es un circuito combinacional que permite un c&oacutedigo BCD en sus entradas y en sus salidas activa un display de 7 segmentos para indicar un d&iacutegito decimal. El display est&aacute formado por un conjunto de 7 leds conectados en un punto com&uacuten en su salida, bien en &aacutenodo comun &oacute &aacutenodo com&uacuten.</dd>
+	<dd>El decodificador requiere de una entrada en c&oacutedigo decimal binario BCD y siete salidas conectadas a cada segmento del display.</dd>
+	<table style="float:center;margin:30px" bgcolor="808080"  width="80%" align="0" border="1">
+
+		<tr align="center" bgcolor="c0c0c0">
+			<td>-</td><td><b>A</b></td><td><b>B</b></td><td><b>C</b></td><td><b>D</b></td><td><b>a</b></td><td><b>b</b></td><td><b>c</b></td><td><b>d</b></td><td><b>e</b></td><td><b>f</b></td><td><b>g</b></td>
+		</tr>
+		<tr align="center" bgcolor="">
+			<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td>
+		</tr>
+
+		<tr align="center">
+			<td>2</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td>
+		</tr>
+
+		<tr align="center">
+			<td>4</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td>
+		</tr>
+
+		<tr align="center">
+			<td>7</td><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td>
+		</tr>
+
+		<tr align="center">
+			<td>9</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td>
+		</tr>
+	</table>
+
+	<p><b><h3>Aplicaciones</h3></b> Los decodificadores se emplean fundamentalmente para seleccionar los diferentes  puertos de E/S ( entrada/salida) y as&iacute la computadora pueda comunicarse con los diferentes dispositivos externos ( perif&eacutericos).  Estos decodificadores son conocidos como decodificador de direcciones de puertos.</p>
+	<img style="float:center;margin:10px" src="Dec6.png" width="363" height="177">
+</dl>
+
+<h1><i><b><font color="#FFB6CI"><center>Video sobre los decodificadores</center></font></b></i></h1>
+
+<center>
+<p>
+<left>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9W8Z070YAYU"
+frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</left>
+</p>
+</center>
+
+<center>
+<h2><a href="javascript:print()"><span style="color: rgb(255, 240, 245);"><span style="font-family: Arial;"><span style="font-size: x-large;">Imprimir Contenido</span></span></span></a></h2>
+</center>
+
+</font>
+</body>
+</html>

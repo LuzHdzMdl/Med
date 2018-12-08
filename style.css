@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.nav{
+  background: #ff5f5f;
+  overflow: hidden;
+}
+.nav .menu_main{
+  list-style: none;
+  background: #ff5f5f;
+}
+.nav .menu_main>li{
+padding: 1em;
+width: 8%;
+float: left;
+}
